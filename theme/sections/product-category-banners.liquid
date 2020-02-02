@@ -9,20 +9,20 @@
 
             <div class="col-md-6">
                 <div class="category-box">
-                    <a href="">
-                        <img src="images/category-1.jpg" alt="">
+                    <a href="{{section.settings.category_top_left_url}}">
+                        <img src="{{section.settings.category_top_left | img_url: "1920x"}}" alt="">
                         <div class="content">
-                            <h3>Clothes Sales</h3>
-                            <p>Shop New Season Clothing</p>
+                            <h3>{{section.settings.category_top_left_header}}</h3>
+                            <p>{{section.settings.category_top_left_text}}</p>
                         </div>
                     </a>
                 </div>
                 <div class="category-box">
-                    <a href="">
-                        <img src="images/category-2.jpg" alt="">
+                    <a href="{{section.settings.category_bottom_left_url}}">
+                        <img src="{{section.settings.category_bottom_left | img_url: "1920x"}}" alt="">
                         <div class="content">
-                            <h3>Smart Casuals</h3>
-                            <p>Get Wide Range Selection</p>
+                            <h3>{{section.settings.category_bottom_left_header}}</h3>
+                            <p>{{section.settings.category_bottom_left_text}}</p>
                         </div>
                     </a>
                 </div>
@@ -30,11 +30,11 @@
 
             <div class="col-md-6">
                 <div class="category-box category-box-2">
-                    <a href="">
-                        <img src="images/category-3.jpg" alt="">
+                    <a href="{{section.settings.category_right_url}}">
+                        <img src="{{section.settings.category_right | img_url: "1920x"}}" alt="">
                         <div class="content">
-                            <h3>Jewellery</h3>
-                            <p>Special Design Comes First</p>
+                            <h3>{{section.settings.category_right_header}}</h3>
+                            <p>{{section.settings.category_right_text}}</p>
                         </div>
                     </a>
                 </div>
@@ -48,14 +48,70 @@
 "name": "Product Category Banners",
 "settings": [
 {
-"type":"image_picker",
-"id":"slide-1",
-"label":"Slide 1"
+"type":"text",
+"id":"category_top_left_header",
+"default":"Dresses",
+"label":"Category Top Left Header"
+},
+{
+"type":"text",
+"id":"category_top_left_text",
+"default":"Sale!",
+"label":"Category Top Left Text"
 },
 {
 "type":"image_picker",
-"id":"slide-2",
-"label":"Slide 2"
+"id":"category_top_left",
+"label":"Category Top Left"
+},
+{
+"type":"url",
+"id":"category_top_left_url",
+"label":"Category Top Left Link"
+},
+{
+"type":"text",
+"id":"category_bottom_left_header",
+"default":"Jeans",
+"label":"Category bottom Left Header"
+},
+{
+"type":"text",
+"id":"category_bottom_left_text",
+"default":"Sale!",
+"label":"Category Bottom Left Header"
+},
+{
+"type":"image_picker",
+"id":"category_bottom_left",
+"label":"Category Bottom Left"
+},
+{
+"type":"url",
+"id":"category_bottom_left_url",
+"label":"Category Bottom Lef Link"
+},
+{
+"type":"text",
+"id":"category_right_header",
+"default":"Dresses",
+"label":"Category Right Header"
+},
+{
+"type":"text",
+"id":"category_right_text",
+"default":"Sale!",
+"label":"Category Right Header"
+},
+{
+"type":"image_picker",
+"id":"category_right",
+"label":"Category Right"
+},
+{
+"type":"url",
+"id":"category_right_url",
+"label":"Category Right Link"
 }
 ]
 }
